@@ -27,3 +27,8 @@ yarn-error.log*
 next-env.d.ts
 
 .DS_Store
+node_modules
+.DS_Store
+
+# env files
+.env*
