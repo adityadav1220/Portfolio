@@ -8,55 +8,29 @@ import { Code, Database, BrainCircuit, LayoutGrid, MessageSquare } from "lucide-
 export default function Skills() {
   const skillCategories = [
     {
-      name: "Programming Languages",
+      name: "Languages",
       icon: <Code className="h-6 w-6 text-blue-600" />,
-      skills: [
-        "Python",
-        "JavaScript",
-        "TypeScript",
-        "Java",
-        "C/C++",
-        "SQL",
-        "HTML",
-        "JSP",
-        "Servlets",
-        "CSS",
-        "JSON",
-        "XML",
-      ],
+      skills: ["Python", "Java", "C++", "SQL", "JavaScript"],
     },
     {
-      name: "AI and ML",
+      name: "Frameworks & Libraries",
       icon: <BrainCircuit className="h-6 w-6 text-blue-600" />,
-      skills: ["Retrieval-Augmented Generation (RAG)", "Natural Language Processing (NLP)", "Prompt Engineering"],
+      skills: ["Node.js", "Express.js", "React.js", "Next.js", "NestJS", "TypeScript"],
     },
     {
-      name: "Large Language Models",
+      name: "Databases",
       icon: <MessageSquare className="h-6 w-6 text-blue-600" />,
-      skills: ["OpenAI GPT", "Claude (Anthropic)", "Gemini (Google)", "LLaMA (Meta AI)"],
+      skills: ["AWS (EC2, S3, Lambda, DynamoDB)", "Docker", "Kubernetes", "Jenkins", "GitHub Actions", "CI/CD Pipelines"],
     },
     {
-      name: "Frameworks and Libraries",
+      name: "AI & Machine Learning",
       icon: <LayoutGrid className="h-6 w-6 text-blue-600" />,
-      skills: [
-        "LangChain",
-        "LlamaIndex",
-        "FastAPI",
-        "RESTful APIs",
-        "Node.js",
-        "Express.js",
-        "Next.js",
-        "Spring Boot",
-        "Spring MVC",
-        "Angular",
-        "Streamlit",
-        "Azure Bot Framework",
-      ],
+      skills: ["TensorFlow", "PyTorch", "Scikit-learn", "OpenAI APIs", "LangChain", "Hugging Face"],
     },
     {
-      name: "Databases and DevOps",
+      name: "Data & Visualization",
       icon: <Database className="h-6 w-6 text-blue-600" />,
-      skills: ["AWS", "Azure", "Supabase", "LanceDB", "Quadrant", "MySQL", "MongoDB", "Git", "GitHub", "Jenkins"],
+      skills: ["Power BI", "Excel (Advanced)", "Pandas", "NumPy", "Matplotlib"],
     },
   ]
 
@@ -113,7 +87,7 @@ export default function Skills() {
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
-        <SectionHeading title="Skills & Expertise" subtitle="Technologies I work with" />
+        <SectionHeading title="Skills & Expertise" subtitle="Tools from my Utility Belt" />
 
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"

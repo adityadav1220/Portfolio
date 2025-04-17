@@ -47,7 +47,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4">
-        <SectionHeading title="Contact Me" subtitle="Let's get in touch" />
+        <SectionHeading title="Contact Me" subtitle="Light up the Bat-Signal" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <motion.div
@@ -67,8 +67,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-800 dark:text-white">Email</h4>
-                      <a href="mailto:akshatsahu1@gmail.com" className="text-blue-600 dark:text-blue-400 hover:underline">
-                        akshatsahu1@gmail.com
+                      <a href="mailto:AYadav25@stevens.edu" className="text-blue-600 dark:text-blue-400 hover:underline">
+                        AYadav25@stevens.edu
                       </a>
                     </div>
                   </div>
@@ -79,8 +79,8 @@ export default function Contact() {
                     </div>
                     <div>
                       <h4 className="font-medium text-gray-800 dark:text-white">Phone</h4>
-                      <a href="tel:+12012757594" className="text-blue-600 dark:text-blue-400 hover:underline">
-                        +1 (201) 275-7594
+                      <a href="tel:+16319740339" className="text-blue-600 dark:text-blue-400 hover:underline">
+                        +1 (631) 974-0339
                       </a>
                     </div>
                   </div>
@@ -100,7 +100,7 @@ export default function Contact() {
                   <h4 className="font-medium text-gray-800 dark:text-white mb-4">Connect with me</h4>
                   <div className="flex gap-4">
                     <a
-                      href="https://linkedin.com/in/akshat2634"
+                      href="https://linkedin.com/in/aditya-yadav-69660ab7"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-blue-100 dark:bg-blue-900 rounded-full text-blue-600 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
@@ -108,7 +108,7 @@ export default function Contact() {
                       <Linkedin className="h-6 w-6" />
                     </a>
                     <a
-                      href="https://github.com/akshat2634"
+                      href="https://github.com/adityayadav1220"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-3 bg-blue-100 dark:bg-blue-900 rounded-full text-blue-600 dark:text-blue-400 hover:bg-blue-200 dark:hover:bg-blue-800 transition-colors"
@@ -212,6 +212,9 @@ export default function Contact() {
             </Card>
           </motion.div>
         </div>
+        <p className="text-sm italic text-gray-400 dark:text-gray-500 mt-10 text-center">
+          "Sometimes all it takes... is a signal."
+        </p>
       </div>
     </section>
   )

@@ -11,11 +11,32 @@ body {
     text-wrap: balance;
   }
 }
+@layer utilities {
+  .nav-hover-effect {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-hover-effect::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: rgba(255, 213, 0, 0.7); /* Subtle Bat-Gold */
+    transition: width 0.4s ease;
+  }
+
+  .nav-hover-effect:hover::after {
+    width: 100%;
+  }
+}
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 0 0% 95%;
     --card: 0 0% 100%;
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
@@ -49,25 +70,25 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 240 5% 96%;
+    --card: 240 10% 4.5%;
+    --card-foreground: 240 5% 96%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 240 5% 96%;
+    --primary: 240 100% 67%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4% 16%;
+    --secondary-foreground: 240 5% 96%;
+    --muted: 240 4% 18%;
+    --muted-foreground: 240 5% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 240 5% 96%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --border: 240 4% 20%;
+    --input: 240 4% 20%;
+    --ring: 240 100% 67%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -75,13 +96,14 @@ body {
     --chart-5: 340 75% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary: 240 100% 67%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 262 83% 58%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 20%;
+    --sidebar-ring: 240 100% 67%;
   }
+  
 }
 
 @layer base {

@@ -9,31 +9,52 @@ import { Calendar, MapPin } from "lucide-react"
 export default function Experience() {
   const experiences = [
     {
-      title: "Founding AI Engineer",
-      company: "Future Path AI",
-      location: "Cupertino, CA",
-      period: "January 2024 — Present",
+      title: "Senior Software Engineer",
+      company: "Coforge Ltd.",
+      location: "Greater Noida, India",
+      period: "Aug 2021 — Aug 2024",
       responsibilities: [
-        "Built real-time voice and chat agents integrated with Microsoft Teams and SIP telephony, orchestrating text-to-speech and speech-to-text pipelines for interruption handling and dialogue state management. Achieved around 400ms end-to-end latency at 10k+ concurrent sessions.",
-        "Engineered multi-tenant AI agents with a modular RAG architecture leveraging vector databases (LanceDB, Qdrant) for semantic retrieval and deployed secure on-prem solutions for Fortune 500 pharma/finance that boosted factual accuracy by 30%.",
-        "Developed AI-based intent classifiers integrated with various ITSM tools such as ServiceNow, Intune, MS365 to automate IT support workflows by leveraging LLMs for generative UI rendering via dynamic adaptive cards, reducing average ticket resolution time by 60% compared to manual triage processes.",
-        "Built follow-up suggestion and citation systems using semantic context linking and retrieval-grounded prompting, lowering ungrounded responses by 45% and improving accuracy and reliability across interactions.",
+        "Resolved 100+ production issues, reducing average resolution time by 20% and boosting system reliability.",
+        "Designed and implemented 10+ custom automation workflows using Visual Cron and MySQL, reducing manual errors by 30%.",
+        "Developed and deployed REST APIs for client applications, improving data retrieval speeds by 25%.",
+        "Enhanced cloud-based deployments, reducing system downtime by 15% through strategic optimizations."
       ],
-      skills: ["RAG", "LLMs", "Vector Databases", "NLP", "Microsoft Teams", "ServiceNow"],
+      skills: ["Python","C#", "Java", "MySQL", "Visual Cron", "REST APIs"]
     },
     {
-      title: "Software Engineering Intern",
-      company: "Nagarro",
-      location: "Gurugram, India",
-      period: "March 2023 — July 2023",
+      title: "Course Assistant — Algorithms",
+      company: "Stevens Institute of Technology",
+      location: "Hoboken, NJ",
+      period: "Jan 2025 — Present",
       responsibilities: [
-        "Engineered a comprehensive Product Community Website leveraging Java, Spring Boot, Hibernate, MySQL, and Angular to deliver modular services for user registration, product browsing, and review management—boosting new user sign-ups by 50% through a scalable, event-driven architecture.",
-        "Developed high-performance RESTful APIs using Java Spring Boot for secure user authentication, registration, product search, and review management. Optimized API workflows with microservices design and strategic caching, reducing 95th percentile response times by 30%.",
-        "Integrated Hibernate ORM with MySQL to enforce secure and efficient data storage/retrieval for user and product information. Implemented advanced indexing and query optimization strategies, resulting in a 40% improvement in database query efficiency.",
-        "Created interactive, responsive front-end interfaces using Angular that leverage dynamic content rendering and client-side caching, leading to a 25% increase in page views per user and improved session engagement.",
+        "Guided students through complex algorithmic concepts and problem-solving strategies.",
+        "Resolved queries and mentored students during coding sessions and office hours.",
+        "Simplified technical topics to improve learning experience for over 100 students."
       ],
-      skills: ["Java", "Spring Boot", "Hibernate", "MySQL", "Angular", "RESTful APIs"],
+      skills: ["Algorithms", "Problem Solving", "Mentorship"]
     },
+    {
+      title: "Software Engineer Intern",
+      company: "RateGain Pvt. Ltd.",
+      location: "Noida, India",
+      period: "Jun 2020 — Aug 2020",
+      responsibilities: [
+        "Built and optimized 10+ Excel-based data reports, enhancing data accessibility by 30%.",
+        "Assisted in SQL query optimization, reducing query execution time by 40%."
+      ],
+      skills: ["SQL", "Data Analysis", "Excel"]
+    },
+    {
+      title: "Software Engineer Intern",
+      company: "TANISI IT Services Pvt. Ltd.",
+      location: "Noida, India",
+      period: "Apr 2020 — May 2020",
+      responsibilities: [
+        "Conducted research on emerging data storage technologies, leading to a 15% improvement in strategy planning.",
+        "Created a 10-page technical report on cloud-based data solutions influencing strategic initiatives."
+      ],
+      skills: ["Research", "Data Storage", "Cloud Technologies"]
+    }
   ]
 
   const containerVariants = {

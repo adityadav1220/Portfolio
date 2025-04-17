@@ -12,33 +12,56 @@ import Link from "next/link"
 export default function Projects() {
   const projects = [
     {
-      title: "Surround Shield AI",
-      period: "Feb 2025 — March 2025",
+      title: "FindMySquad",
+      period: "Jan 2024 — Mar 2024",
       description:
-        "AI-powered personal health guardian that tracks vital metrics, monitors location data, and delivers real-time, personalized health insights using advanced analytics.",
+        "A full-stack web platform designed to connect users for sports, fitness, and gaming activities within their city.",
       features: [
-        "Developed SurroundShield, an AI-powered personal health guardian that tracks vital metrics (e.g., BMI, weight, height), monitors location data, and delivers real-time, personalized health insights using advanced analytics.",
-        "Integrated Databricks Playground for LLM processing using the LLAMA 3.1 70B model, enabling context-aware health recommendations, risk assessments, and proactive alerts, thereby boosting overall user engagement and system efficacy.",
-        "Architected a full-stack solution using React.js for dynamic UI development, Node.js/Express.js for scalable user management, and Python Flask for deploying AI/ML services, ensuring seamless cross-layer integration.",
-        "Secured data storage with MongoDB Atlas and implemented Argon2id for password hashing to ensure robust protection, compliance, and data integrity.",
+        "Host and join local events for sports, gym sessions, or gaming meetups.",
+        "User profiles with interests, locations, and ratings.",
+        "Filtering by sport, city, and relevance for better event matching.",
       ],
-      technologies: ["React.js", "Node.js", "Express.js", "Python Flask", "MongoDB Atlas", "LLAMA 3.1", "Databricks"],
-      github: "https://github.com/Akshat2634/SurroundShield",
+      technologies: ["Node.js", "Express.js", "MongoDB", "Handlebars", "JavaScript"],
+      github: "https://github.com/78himanshu/FindMySquad",
       demo: null,
     },
     {
-      title: "PawPal",
-      period: "March 2024 — May 2024",
+      title: "Classroom Evaluation Tool",
+      period: "January 2021 - May 2021",
       description:
-        "A full-stack web app connecting pet owners with pet care service providers for pet management and adoption.",
+        "A web tool designed to analyze student attention spans to improve classroom engagement for teachers.",
+      features: [      
+        "Real-time attention analysis dashboard.",
+        "User-friendly interface for teachers to review session analytics.",
+        "Improved classroom strategies based on insights.",],
+      technologies: ["Python", "Flask", "OpenCV", "JavaScript"],
+      github: null,
+      demo: null,
+    },
+    {
+      title: "Anime Merchandise E-Commerce Platform",
+      period: "July 2023 — Sept 2023",
+      description: "A fully functional e-commerce website built specifically for anime merchandise.",
       features: [
-        "Developed PawPal, a full-stack web app using Node.js, Express.js, and MongoDB connecting pet owners with pet care service providers for pet management and adoption.",
-        "Implemented secure authentication and session management with bcrypt for password hashing and express-session for user sessions, protecting user and service provider data.",
-        "Integrated ElasticEmail API for sending appointment confirmation emails with dynamic details and checklists, as well as enabling secure password recovery with one-time passwords (OTPs).",
-        "Enhanced PawPal community engagement through appointment scheduling, post creation, commenting, and review features, facilitating communication and feedback loops.",
+        "Product listings, user registration, and cart management.",
+        "Secure authentication and payment integration.",
+        "Handled 100+ transactions within first month.",
       ],
-      technologies: ["Node.js", "Express.js", "MongoDB", "bcrypt", "ElasticEmail API"],
-      github: "https://github.com/akshat2634/pawpal",
+      technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
+      github: null,
+      demo: null,
+    },
+    {
+      title: "Wedding Photos Website",
+      period: "May 2023 — June 2023",
+      description: "A platform for guests to upload and share wedding moments easily with the couple and attendees.",
+      features: [
+        "Secure image uploads by guests.",
+        "Memories organized for event viewing.",
+        "User-friendly gallery display.",
+      ],
+      technologies: ["React.js", "Node.js", "MongoDB"],
+      github: null,
       demo: null,
     },
   ]
@@ -104,7 +127,7 @@ export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900 overflow-hidden">
       <div className="container mx-auto px-4">
-        <SectionHeading title="Projects" subtitle="Some of my recent work" />
+        <SectionHeading title="Projects" subtitle="What I've been building lately" />
 
         <motion.div
           ref={containerRef}

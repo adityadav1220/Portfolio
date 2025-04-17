@@ -10,8 +10,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Akshat Sahu | Portfolio",
-  description: "AI Engineer & Full Stack Developer",
+  title: "Aditya Yadav | Software Engineer & Backend Developer",
+  description: "Backend-focused Software Engineer passionate about building scalable systems, crafting clean solutions, and quietly shaping the digital world.",
     generator: 'v0.dev'
 }
 
@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
           <Navbar />
           {children}
           <Analytics />

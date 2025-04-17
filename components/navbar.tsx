@@ -11,7 +11,9 @@ import { motion, AnimatePresence } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { useTheme } from "next-themes"
 
+
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState<string | null>(null)
   const [isScrolled, setIsScrolled] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
@@ -26,6 +28,29 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  useEffect(() => {
+    const sectionIds = navLinks.map((link) => link.href)
+  
+    const handleScrollActiveSection = () => {
+      const scrollPosition = window.scrollY + 100 // offset for navbar
+  
+      for (let id of sectionIds) {
+        const element = document.querySelector(id)
+        if (element) {
+          const offsetTop = element.getBoundingClientRect().top + window.scrollY
+          const offsetBottom = offsetTop + element.clientHeight
+  
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(id)
+            break
+          }
+        }
+      }
+    }
+  
+    window.addEventListener("scroll", handleScrollActiveSection)
+    return () => window.removeEventListener("scroll", handleScrollActiveSection)
+  }, [])
   useEffect(() => {
     setMounted(true)
   }, [])
@@ -80,7 +105,7 @@ export default function Navbar() {
         >
           <Link href="#home" className="text-xl font-bold" onClick={(e) => handleNavClick(e, "#home")}>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-              Akshat Sahu
+              AY
             </span>
           </Link>
         </motion.div>
@@ -101,7 +126,12 @@ export default function Navbar() {
             >
               <Link
                 href={link.href}
-                className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-300 dark:hover:text-blue-400 transition-colors relative group"
+                className={cn(
+                  "px-3 py-2 text-sm font-medium transition-colors nav-hover-effect",
+                  activeSection === link.href
+                    ? "text-yellow-400"
+                    : "text-gray-300"
+                )}
                 onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.name}
@@ -114,7 +144,7 @@ export default function Navbar() {
             animate={{ opacity: mounted ? 1 : 0, scale: mounted ? 1 : 0.8 }}
             transition={{ duration: 0.3, delay: 0.8 }}
           >
-            <ModeToggle />
+            {mounted && <ModeToggle />}
           </motion.div>
         </motion.nav>
 
@@ -125,7 +155,7 @@ export default function Navbar() {
             animate={{ opacity: mounted ? 1 : 0, scale: mounted ? 1 : 0.8 }}
             transition={{ duration: 0.3, delay: 0.4 }}
           >
-            <ModeToggle />
+            {mounted && <ModeToggle />}
           </motion.div>
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
