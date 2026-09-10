@@ -1,4 +1,6 @@
-@tailwind base;\n@tailwind components;\n@tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root { --bg:#f3f1eb; --surface:#fff; --surface-2:#e9e6de; --ink:#11120f; --muted:#65675f; --line:#cbc8be; --accent:#6d5dfc; --glow:rgba(109,93,252,.22); }
 :root[data-theme="dark"] { --bg:#090a09; --surface:#121311; --surface-2:#191b18; --ink:#f3f3eb; --muted:#9a9c93; --line:#2d2f2b; --accent:#9b8cff; --glow:rgba(139,124,255,.25); }
