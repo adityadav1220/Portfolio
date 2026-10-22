@@ -17,5 +17,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en"><head><link rel="preload" href="/images/skyline.jpg" as="image" /></head><body>{children}</body></html>;
+  return <html lang="en"><head><link rel="preload" href="/images/skyline-ay-study.jpg" as="image" /></head><body>{children}</body></html>;
 }
